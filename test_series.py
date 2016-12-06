@@ -27,6 +27,11 @@ LUC_TABLE = [
 SUM_TABLE = [
     [0, 0, 1, 0],
     [0, 2, 1, 2],
+    [1, 4, 5, 5],
+    [1, 27, 29, 29],
+    [2, 27, 29, 56],
+    [3, 27, 29, 85],
+    [4, 27, 29, 141],
 ]
 
 
@@ -44,7 +49,7 @@ def test_lucas(n, result):
     assert lucas(n) == result
 
 
-@pytest.mark.paramtrize("x, y, z, result", SUM_TABLE)
+@pytest.mark.parametrize("x, y, z, result", SUM_TABLE)
 def test_sum(x, y, z, result):
     """Test sum_series function."""
     from series import sum_series

@@ -28,4 +28,4 @@ def sum_series(x, y=0, z=1):
     elif x == 1:
         return z
     else:
-        return sum_series(x - 1) + sum_series(x - 2)
+        return sum_series((x - 1), y, z) + sum_series((x - 2), y, z)
