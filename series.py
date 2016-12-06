@@ -19,3 +19,13 @@ def lucas(n):
         return 1
     else:
         return lucas(n - 1) + lucas(n - 2)
+
+
+def sum_series(x, y=0, z=1):
+    """Return the result of sum_series given x, optional arguments y, z."""
+    if x == 0:
+        return y
+    elif x == 1:
+        return z
+    else:
+        return sum_series(x - 1) + sum_series(x - 2)
