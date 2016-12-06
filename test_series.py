@@ -24,6 +24,11 @@ LUC_TABLE = [
     [7, 29],
 ]
 
+SUM_TABLE = [
+    [0, 0, 1, 0],
+    [0, 2, 1, 2],
+]
+
 
 @pytest.mark.parametrize("n, result", FIB_TABLE)
 def test_fibonacci(n, result):
@@ -37,3 +42,10 @@ def test_lucas(n, result):
     """Test lucas function against the results from our luc table."""
     from series import lucas
     assert lucas(n) == result
+
+
+@pytest.mark.paramtrize("x, y, z, result", SUM_TABLE)
+def test_sum(x, y, z, result):
+    """Test sum_series function."""
+    from series import sum_series
+    assert sum_series(x, y, z) == result
