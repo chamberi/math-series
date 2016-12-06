@@ -29,3 +29,7 @@ def sum_series(x, y=0, z=1):
         return z
     else:
         return sum_series((x - 1), y, z) + sum_series((x - 2), y, z)
+
+
+if __name__ == "__main__":
+    main()
