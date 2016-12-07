@@ -27,13 +27,18 @@ def iter_fibonacci(n):
 
 
 def lucas(n):
-    """Return the nth value in the lucas series."""
+    """Return the nth value in the lucas series using recursion."""
     if n == 1:
         return 2
     elif n == 2:
         return 1
     else:
         return lucas(n - 1) + lucas(n - 2)
+
+
+def iter_lucas(n):
+    """Return the nth value in the lucas series using iteration."""
+# same model than the iter_fibonacci function
 
 
 def sum_series(x, y=0, z=1):

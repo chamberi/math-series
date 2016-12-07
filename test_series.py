@@ -57,6 +57,13 @@ def test_lucas(n, result):
     assert lucas(n) == result
 
 
+@pytest.mark.parametrize("n, result", LUC_TABLE)
+def test_iter_lucas(n, result):
+    """Test lucas function against the results from our luc table."""
+    from series import iter_lucas
+    assert iter_lucas(n) == result
+
+
 @pytest.mark.parametrize("x, y, z, result", SUM_TABLE)
 def test_sum(x, y, z, result):
     """Test sum_series function."""
