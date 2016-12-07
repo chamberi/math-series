@@ -3,12 +3,27 @@
 
 def fibonacci(n):
     """Return the nth value in fibonacci series."""
-    if n == 0:
+    if n == 1:
         return 0
-    elif n == 1:
+    elif n == 2:
         return 1
     else:
         return fibonacci(n - 1) + fibonacci(n - 2)
+
+
+def iter_fibonacci(n):
+    """Return the nth number of the Fibonacci sequence using iteration."""
+    a = 0
+    b = 1
+    if n == 1:
+        return a
+    elif n == 2:
+        return b
+    else:
+        for num in range(n - 2):
+            b = b + a
+            a = b - a
+        return b
 
 
 def lucas(n):
