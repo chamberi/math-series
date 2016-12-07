@@ -34,20 +34,21 @@ def sum_series(x, y=0, z=1):
 if __name__ == "__main__":
     output = """
     This module defines functions that implement mathematical series.
-    ...
 
     fibonacci(n):
     Returns the nth value in the fibonacci series
+    >>> fibonnaci(2)
+    1
 
     lucas(n):
     return the nth value in the fibonacci series
+    >>> lucas(2)
+    3
 
     sum_series(x, y=0, z=1):
     return the xth value in this series based on the optional arguments y and z
     the option arguments will act are our base cases.
-
+    >>> sum_series(5, 7, 10)
+    71
     """
     print(output)
-    print("fibonnaci(2):", fibonacci(2))
-    print("lucas(2):", lucas(2))
-    print("sum_series(5, 7, 10):", sum_series(5, 7, 10))
