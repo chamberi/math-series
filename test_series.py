@@ -15,14 +15,14 @@ FIB_TABLE = [
 
 
 LUC_TABLE = [
-    [0, 2],
-    [1, 1],
-    [2, 3],
-    [3, 4],
-    [4, 7],
-    [5, 11],
-    [6, 18],
-    [7, 29],
+    [1, 2],
+    [2, 1],
+    [3, 3],
+    [4, 4],
+    [5, 7],
+    [6, 11],
+    [7, 18],
+    [8, 29],
 ]
 
 SUM_TABLE = [
@@ -35,20 +35,19 @@ SUM_TABLE = [
     [4, 27, 29, 141],
 ]
 
+
 @pytest.mark.parametrize("n, result", FIB_TABLE)
 def test_iter_fibonacci(n, result):
     """Test fibonacci function against the results from our fib table."""
     from series import iter_fibonacci
     assert iter_fibonacci(n) == result
 
+
 @pytest.mark.parametrize("n, result", FIB_TABLE)
 def test_fibonacci(n, result):
     """Test fibonacci function against the results from our fib table."""
     from series import fibonacci
     assert fibonacci(n) == result
-
-
-
 
 
 @pytest.mark.parametrize("n, result", LUC_TABLE)
